@@ -8,7 +8,7 @@ TYPE=${1}
 # Exclude git and installation files.
 EXCLUDE="--exclude .git \
          --exclude .gitignore \
-         --exclude README* \
+         --exclude *.md \
          --exclude install"
 
 # Omit simple versions if not set.
