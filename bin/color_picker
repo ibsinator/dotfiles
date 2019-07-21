@@ -1,0 +1,73 @@
+#! /bin/bash
+
+# Exit codes
+# 0  SUCCESS
+# 1  ERROR
+# 2  ERROR: Wrong format of bash color.
+# 3  ERROR: Unrecognised environment format.
+# 4  ERROR: Unknown color
+
+BASEDIR=~/.color_picker.d
+MODE_FILE="${BASEDIR}/color_mode"
+
+COLOR=${1}
+COLOR_ENV=${2}
+COLOR_TYPE=${3}
+
+# Column from color file to use.
+NAME='1'
+NUMBER='2'
+FOREGROUND='3'
+BACKGROUND='4'
+ALT_NAME='5'
+
+# Get current color mode. Default to "light" if unset.
+if [[ ! -f ${MODE_FILE} ]]; then
+    mode=light
+else
+    mode=$(cat ${MODE_FILE})
+fi
+
+COLOR_CONFIG="${BASEDIR}/color_${mode}"
+
+# Find which column to read from color file.
+case ${COLOR_ENV} in
+    bash)
+        COLOR_CONFIG="${BASEDIR}/color_ansi"
+        prefix=""
+        if [[ ${COLOR_TYPE} == [Ff][Gg] ]]; then
+            column=${FOREGROUND}
+        elif [[ ${COLOR_TYPE} == [Bb][Gg] ]]; then
+            column=${BACKGROUND}
+        else
+            echo "ERROR: Wrong format of bash color."
+            exit 2
+        fi
+    ;;
+    tmux)
+        prefix="colour"
+        column=${NUMBER}
+    ;;
+    vim)
+        prefix=""
+        column=${NUMBER}
+    ;;
+    *)
+        echo "ERROR: Unrecognised environment format."
+        exit 3
+    ;;
+esac
+
+# Find the color.
+FIND_COLOR=$(grep -ie "^${COLOR} " ${COLOR_CONFIG} | \
+           awk -v col=$column 'BEGIN{OFS=IFS="\t"} {print $col}' )
+
+# Display an error mesage if the color was not found,
+if [[ -z ${FIND_COLOR} ]]; then
+    echo "ERROR: Unknown color."
+    exit 4
+fi
+
+# Print the color and exit gracefully.
+echo ${prefix}${FIND_COLOR}
+exit 0
