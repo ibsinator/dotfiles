@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+# -----------------------------------------------------------------------------
+# RIGHT STATUSBAR FOR TMUX ----------------------------------------------------
+# -----------------------------------------------------------------------------
+
+power_info=$(pmset -g batt)
+power_source=$(echo ${power_info} | awk '{print $4 $5'} )
+
+green="#[bg="$(~/bin/color_picker DARK_GREEN tmux)"]"
+grey="#[bg="$(~/bin/color_picker GREY tmux)"]"
+orange="#[bg="$(~/bin/color_picker ORANGE tmux)"]"
+red="#[bg="$(~/bin/color_picker DARK_RED tmux)"]"
+yellow="#[bg="$(~/bin/color_picker CLEAR_YELLOW tmux)"]"
+white="#[fg="$(~/bin/color_picker STATUS_LIGHT_TEXT tmux)"]"
+black="#[fg="$(~/bin/color_picker STATUS_DARK_TEXT tmux)"]"
+
+
+power_info_mac(){
+    battery_status=$(pmset -g batt | grep -Eo "\d+%")
+    if [[ ${power_source} == "'ACPower'" ]] && (( ${battery_status%?} > 97 )); then
+        background="${grey}"
+        text="${white}"
+    elif (( ${battery_status%?} > 59 )); then
+        background="${green}"
+        text="${white}"
+    elif (( "${battery_status%?}" > 29 )); then
+        background="${yellow}"
+        text="${black}"
+    elif (( "${battery_status%?}" > 19 )); then
+        background="${orange}"
+        text="${white}"
+    else
+        background="${red}"
+        text="${white}"
+    fi
+
+    echo -e ${background}${text}" ${battery_status} "
+}
+
+
+main(){
+    if [[ $(uname) == "Darwin" ]]; then
+        power_info_mac
+    fi
+}
+
+
+main

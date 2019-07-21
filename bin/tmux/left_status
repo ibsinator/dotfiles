@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# -----------------------------------------------------------------------------
+# LEFT STATUS FOR TMUX --------------------------------------------------------
+# -----------------------------------------------------------------------------
+
+window_list=$(tmux list-windows | awk '{print $1 $2}')
+window_tabs=""
+default_color="#[bg=default]"
+
+for window_name in ${window_list}; do
+    if [[ ${window_name} =~ [*]$ ]]; then
+        # Active windows.
+        color="#[bg=$(~/bin/color_picker WIN_ACTIVE tmux) \
+               fg=$(~/bin/color_picker WIN_ACTIVE_TEXT tmux)]"
+    elif [[ ${window_name} =~ [*][Z]$ ]]; then
+        # Active window in zoomed mode.
+        color="#[bg=$(~/bin/color_picker WIN_Z_ACTIVE tmux) \
+               fg=$(~/bin/color_picker WIN_Z_ACTIVE_TEXT tmux)]"
+    else
+        # Inactive window.
+        color="#[bg=$(~/bin/color_picker WIN_INACTIVE tmux) \
+               fg=$(~/bin/color_picker WIN_INACTIVE_TEXT tmux)]"
+    fi
+
+    # Remove indicators in window names, i.e. [*-Z].
+    window_name=$(echo ${window_name} | sed 's/[Z]$//' | sed 's/[*-]$//')
+
+    window_tabs="${window_tabs}${color} ${window_name} "${default_color}" "
+done
+
+echo "${window_tabs}"
