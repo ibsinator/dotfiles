@@ -1,0 +1,16 @@
+# Allow italic fonts in iTerm2.
+tic /Users/catrine/.bashrc.d/xterm-256color-italic.terminfo
+
+# Colorize output of grep-commands.
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Colorize output of ls.
+alias ls='ls -lG'
+
+# ll lists all files but . and ..
+alias ll='ls -Al'
+
+# Help for lazy fingers.
+alias cd..='cd ..'

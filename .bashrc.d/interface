@@ -1,0 +1,8 @@
+# Check window size after all commands.
+shopt -s checkwinsize
+
+# Use colored prompt.
+force_color_prompt=yes
+
+# Allow italic fonts.
+export TERM=xterm-256color-italic
