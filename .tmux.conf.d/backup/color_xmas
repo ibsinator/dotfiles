@@ -1,0 +1,41 @@
+# ANSI colors ----------------------------------------------------------------
+# Name             Nr   Foreground       Background       Alt. name
+BLACK              0    \[\033[0;30m\]   \[\033[0;40m\]   black
+RED                1    \[\033[0;31m\]   \[\033[0;40m\]   red
+GREEN              2    \[\033[0;32m\]   \[\033[0;40m\]   green
+YELLOW             3    \[\033[0;33m\]   \[\033[0;40m\]   yellow
+BLUE               4    \[\033[0;34m\]   \[\033[0;40m\]   blue
+MAGENTA            5    \[\033[0;35m\]   \[\033[0;40m\]   magenta
+CYAN               6    \[\033[0;36m\]   \[\033[0;40m\]   cyan
+LIGHT_GREY         7    \[\033[0;37m\]   \[\033[0;40m\]   white
+DARK_GREY          8    \[\033[1;30m\]   \[\033[0;40m\]   brightblack
+BRIGHT_RED         9    \[\033[1;31m\]   \[\033[0;40m\]   brightred
+BRIGHT_GREEN       10   \[\033[1;32m\]   \[\033[0;40m\]   brightgreen
+BRIGHT_YELLOW      11   \[\033[1;33m\]   \[\033[0;40m\]   brightyellow
+BRIGHT_BLUE        12   \[\033[1;34m\]   \[\033[0;40m\]   brightblue
+BRIGHT_MAGENTA     13   \[\033[1;35m\]   \[\033[0;40m\]   brightmagenta
+BRIGHT_CYAN        14   \[\033[1;36m\]   \[\033[0;40m\]   brightcyan
+WHITE              15   \[\033[1;37m\]   \[\033[0;40m\]   brightwhite
+
+DEFAULT            00   \[\033[00m\]     \[\033[00m\]     default
+
+
+# Status bar -----------------------------------------------------------------
+BAR_BG             234
+STATUSBAR_TEXT     233
+MESSAGEBAR_TEXT    220
+STATUS_DARK_TEXT   233
+STATUS_LIGHT_TEXT  254
+
+# Battery status 
+CLEAR_YELLOW       221
+DARK_GREEN         28
+DARK_RED           88
+GREY               239
+ORANGE             208
+
+# Tabs for windows
+WIN_ACTIVE         221
+WIN_ACTIVE_TEXT    233
+WIN_INACTIVE       88
+WIN_INACTIVE_TEXT  229
