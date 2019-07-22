@@ -1,5 +1,5 @@
 # Allow italic fonts in iTerm2.
-tic /Users/catrine/.bashrc.d/xterm-256color-italic.terminfo
+tic /Users/$(id -un)/.bashrc.d/xterm-256color-italic.terminfo
 
 # Colorize output of grep-commands.
 alias grep='grep --color=auto'
