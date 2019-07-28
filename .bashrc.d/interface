@@ -5,4 +5,12 @@ shopt -s checkwinsize
 force_color_prompt=yes
 
 # Allow italic fonts.
-export TERM=xterm-256color-italic
+if [[ $(uname) == "Darwin" ]];then
+    # Allow italic fonts in iTerm2.
+    # Don't forget to activate in iTerm:
+    #   Preferences -> Profiles -> Text -> Italic text allowed
+    tic /Users/$(id -un)/.bashrc.d/xterm-256color-italic.terminfo
+    export TERM=xterm-256color-italic
+else
+    export TERM=xterm-256color
+fi
