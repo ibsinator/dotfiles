@@ -2,14 +2,14 @@
 
 # Script for automatic deploy of dotfiles.
 
-# When type holds a value, simple versions will be set.
+SCRIPT_NAME=${0}
 TYPE=${1}
 
 # Exclude git and installation files.
 EXCLUDE="--exclude .git \
          --exclude .gitignore \
          --exclude *.md \
-         --exclude install"
+         --exclude ${SCRIPT_NAME}"
 
 # Omit simple versions if not set.
 if [[ -z ${TYPE} ]]; then
@@ -31,8 +31,8 @@ fi
 # Copy dotfiles to the home directory (~).
 if [[ -z ${TYPE} ]]; then
     echo "Copying dotfiles to home directory."
-    rsync -a ${EXCLUDE} ../ ~/
+    rsync -a ${EXCLUDE} . ~/
 else
     echo "Copying simple version of dotfiles to home directory."
-    rsync -a ${EXCLUDE} ../simple_versions ~/
+    rsync -a ${EXCLUDE} simple_versions ~/
 fi
