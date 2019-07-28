@@ -3,9 +3,9 @@
 # -----------------------------------------------------------------------------
 
 # Status bar ------------------------------------------------------------------
-set -g status-bg colour250                  # Background color for status bar.
+set -g status-bg colour252                  # Background color for status bar.
 set -g status-fg colour0                    # Text color for status bar.
-set -g message-bg colour250                 # Background color for message bar.
+set -g message-bg colour252                 # Background color for message bar.
 set -g message-fg colour0                   # Text color for message bar.
 
 set -g status-right ' %H:%M  #(~/bin/tmux/right_status)'
@@ -17,5 +17,5 @@ set -g window-active-style 'bg=colour15'
 # Panes -----------------------------------------------------------------------
 set -g pane-border-fg colour15              # Color for inactive pane.
 set -g pane-border-bg colour15              # Color for inactive pane.
-set -g pane-active-border-fg colour250      # Color for active pane.
-set -g pane-active-border-bg colour250      # Color for active pane.
+set -g pane-active-border-fg colour252      # Color for active pane.
+set -g pane-active-border-bg colour252      # Color for active pane.
