@@ -8,7 +8,8 @@
 " NOTE:
 " The colors only work in terminal, not GUI.
 " The following terminals are tested:
-"   • iTerm2
+"   - iTerm2
+"   - xterm
 "
 " INSTALLATION:
 " 1. Copy this file to:
@@ -98,7 +99,7 @@ function! LightMode()
     " Language specific highlight ---------------------------------------------
     " Bash
     hi shConditional  ctermfg=179  ctermbg=NONE cterm=NONE
-    hi shStatement    ctermfg=229  ctermbg=NONE cterm=NONE
+    hi shStatement    ctermfg=130  ctermbg=NONE cterm=NONE
 
     " Vim
     hi link vimFuncKey Function
