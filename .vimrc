@@ -113,13 +113,13 @@ endfunc
 
 
 " NERDTree --------------------------------------------------------------------
-" Map [Ctrl]+[N] to start NERDTree.
-" map <C-n> :NERDTreeToggle<CR>
+"Map [Ctrl]+[N] to start NERDTree.
+"map <C-n> :NERDTreeToggle<CR>
 
 " Automatically close Vim when NerdTree is the last Window.
-" autocmd bufenter * if (winnr("$") == 1 &&
-      \ exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd bufenter * if (winnr("$") == 1 &&
+"      \ exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Automatically start NERDTree if no file is specified.
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
