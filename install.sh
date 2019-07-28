@@ -2,7 +2,7 @@
 
 # Script for automatic deploy of dotfiles.
 
-SCRIPT_NAME=${0}
+SCRIPT_NAME=${0: +2}
 TYPE=${1}
 
 # Exclude git and installation files.

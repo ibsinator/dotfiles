@@ -60,16 +60,16 @@ set noshowmode             " Hide mode.
 " Dictionary containing all modes ---------------------------------------------
 let g:currentmode={
     \ 'n'      : 'NORMAL',
-    \ 'no'     : 'NORMAL•OPERATOR PENDING',
+    \ 'no'     : 'NORMAL-OPERATOR PENDING',
     \ 'v'      : 'VISUAL',
-    \ 'V'      : 'V•LINE',
-    \ "\<C-V>" : 'V•BLOCK',
+    \ 'V'      : 'V-LINE',
+    \ "\<C-V>" : 'V-BLOCK',
     \ 's'      : 'SELECT',
-    \ 'S'      : 'S•LINE',
-    \ "\<C-S>" : 'S•BLOCK',
+    \ 'S'      : 'S-LINE',
+    \ "\<C-S>" : 'S-BLOCK',
     \ 'i'      : 'INSERT',
     \ 'R'      : 'REPLACE',
-    \ 'Rv'     : 'V•REPLACE',
+    \ 'Rv'     : 'V-REPLACE',
     \ 'c'      : 'COMMAND',
     \ 'cv'     : 'VIM EX',
     \ 'ce'     : 'EX',
@@ -108,18 +108,18 @@ endfunc
 " -----------------------------------------------------------------------------
 
 " apt-vim ---------------------------------------------------------------------
-execute pathogen#infect()
-call pathogen#helptags()
+" execute pathogen#infect()
+" call pathogen#helptags()
 
 
 " NERDTree --------------------------------------------------------------------
 " Map [Ctrl]+[N] to start NERDTree.
-map <C-n> :NERDTreeToggle<CR>
+" map <C-n> :NERDTreeToggle<CR>
 
 " Automatically close Vim when NerdTree is the last Window.
-autocmd bufenter * if (winnr("$") == 1 &&
+" autocmd bufenter * if (winnr("$") == 1 &&
       \ exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Automatically start NERDTree if no file is specified.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
