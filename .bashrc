@@ -8,6 +8,7 @@ if [[ -d ${CONF_DIR} ]];then
                           "functions" \
                           "interface" \
                           "language" \
+                          "prompt" \
                           )
 
     # Load config.
@@ -32,7 +33,6 @@ if [[ -d ${CONF_DIR} ]];then
 
     declare -a OS_FILES=( \
                         "aliases" \
-                        "prompt" \
                         )
     # Load OS specific config.
     for os_conf in "${OS_FILES[@]}";do

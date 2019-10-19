@@ -1,11 +1,14 @@
 # Disable duplicates starting with space.
 HISTCONTROL=ignoreboth
 
-# Don't overwrite history file.
-shopt -s histappend
+# Format of history.
+HISTTIMEFORMAT="%d%m%y %T  "
 
 # Size of history buffer.
 HISTSIZE=10000
 
 # Size of history file.
 HISTFILESIZE=20000
+
+# Don't overwrite history file.
+shopt -s histappend
