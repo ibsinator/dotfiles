@@ -36,3 +36,11 @@ else
     echo "Copying simple version of dotfiles to home directory."
     rsync -a ${EXCLUDE} simple_versions ~/
 fi
+
+# Copy settings for Gnome Terminal, if present.
+if [[ $(uname) == 'Linux' ]] &&  dpkg -l | grep " gnome-terminal " > /dev/null; then
+    echo "Setting custom profiles for Gnome Terminal."
+    cp .config/EyeCandy.conf ~/.config/
+    dconf reset -f /org/gnome/terminal/
+    dconf load /org/gnome/terminal/ < ~/.config/EyeCandy.conf
+fi
