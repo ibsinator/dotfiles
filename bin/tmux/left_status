@@ -23,7 +23,7 @@ for window_name in ${window_list}; do
     fi
 
     # Remove indicators in window names, i.e. [*-Z].
-    window_name=$(echo ${window_name} | sed 's/[Z]$//' | sed 's/[*-]$//')
+    window_name=$(echo ${window_name} | sed 's/[Z]$//' | sed 's/[*-]$//' | awk '{print toupper($0)}')
 
     window_tabs="${window_tabs}${color} ${window_name} "${default_color}" "
 done
