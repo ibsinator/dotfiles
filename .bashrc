@@ -6,7 +6,8 @@ if [[ -d ${CONF_DIR} ]];then
     declare -a CONF_FILES=( \
                           "editor" \
                           "functions" \
-                          "interface" \
+                          "history" \
+                          "interface_bash" \
                           "language" \
                           "prompt" \
                           )
