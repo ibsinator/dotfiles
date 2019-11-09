@@ -1,15 +1,32 @@
 # -----------------------------------------------------------------------------
-# INTERFACE COLORS FOR LIGHT TMUX ---------------------------------------------
+# INTERFACE COLORS FOR LIGHT TERMINAL -----------------------------------------
 # -----------------------------------------------------------------------------
 
-# Battery status --------------------------------------------------------------
+# zsh: prompt colors ----------------------------------------------------------
+GIT_CLEAN          2
+GIT_UNCOMMITTED    3
+GIT_UNTRACKED      5
+GIT_UNSTAGED       1
+PROMPT_DIR         245
+PROMPT_ERROR       9
+PROMPT_LINUX       2
+PROMPT_MAC         3
+
+# tmux: status bar ------------------------------------------------------------
+BAR_BG             234
+STATUSBAR_TEXT     233
+MESSAGEBAR_TEXT    220
+STATUS_DARK_TEXT   233
+STATUS_LIGHT_TEXT  254
+
+# tmux: battery status --------------------------------------------------------
 CLEAR_YELLOW       220
 DARK_GREEN         34
 DARK_RED           124
 GREY               239
 ORANGE             172
 
-# Tabs for windows ------------------------------------------------------------
+# tmux: tabs for windows ------------------------------------------------------
 WIN_ACTIVE         64
 WIN_ACTIVE_TEXT    15
 WIN_INACTIVE       252

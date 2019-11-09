@@ -2,14 +2,31 @@
 # INTERFACE COLORS FOR HOLIDAY TMUX -------------------------------------------
 # -----------------------------------------------------------------------------
 
-# Battery status --------------------------------------------------------------
+# zsh: prompt colors ----------------------------------------------------------
+GIT_CLEAN          2
+GIT_UNCOMMITTED    3
+GIT_UNTRACKED      5
+GIT_UNSTAGED       1
+PROMPT_DIR         245
+PROMPT_ERROR       9
+PROMPT_LINUX       2
+PROMPT_MAC         3
+
+# tmux: status bar ------------------------------------------------------------
+BAR_BG             234
+STATUSBAR_TEXT     233
+MESSAGEBAR_TEXT    220
+STATUS_DARK_TEXT   233
+STATUS_LIGHT_TEXT  255
+
+# tmux: battery status --------------------------------------------------------
 CLEAR_YELLOW       221
 DARK_GREEN         28
 DARK_RED           88
 GREY               239
 ORANGE             208
 
-# Tabs for windows ------------------------------------------------------------
+# tmux: tabs for windows -------------------------------------------------------
 WIN_ACTIVE         221
 WIN_ACTIVE_TEXT    233
 WIN_INACTIVE       88
