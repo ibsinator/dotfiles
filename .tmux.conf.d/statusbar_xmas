@@ -1,13 +1,17 @@
 # -----------------------------------------------------------------------------
-# COLORS FOR TMUX STATUS BAR --------------------------------------------------
+# INTERFACE SETTINGS FOR XMAS TMUX --------------------------------------------
 # -----------------------------------------------------------------------------
-set -g status-bg colour88                    # Background color for status bar
-set -g status-fg colour228                   # Text color for status bar
-set -g message-bg colour88                   # Background color for message bar
-set -g message-fg colour228                  # Text color for message bar
 
-set -g status-right-length 40
-set -g status-right ' · ✭ ★  %H:%M ★ ✭ ·  #(~/bin/tmux/right_status)'
+# Status bar ------------------------------------------------------------------
+set -g status-style              bg=colour88,fg=colour228
+set -g message-style             bg=colour88,fg=colour228
+set -g status-right              ' · ✭ ★  %H:%M ★ ✭ ·  #(~/bin/tmux/right_status)'
+set -g status-right-length 28
 
-set -g pane-border-fg colour253              # Color for inactive pane
-set -g pane-active-border-fg colour88        # Color for active pane
+# Windows ---------------------------------------------------------------------
+set -g window-style               bg=colour7
+set -g window-active-style        bg=terminal
+
+# Panes -----------------------------------------------------------------------
+set -g pane-border-style          bg=colour15,fg=colour15
+set -g pane-active-border-style   bg=colour252,fg=colour252
