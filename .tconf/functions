@@ -14,7 +14,11 @@ function cmode () {
         tmux source-file ~/.tmux.conf
     fi
 
-    source ~/.tconf/prompt
+    if ps -p $$ | grep zsh > /dev/null; then
+        source ~/.tconf/prompt_zsh
+    else
+        source ~/.tconf/prompt_bash
+    fi
 
     else
         echo "  Usage color_mode [light|dark|xmas]"

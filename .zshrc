@@ -1,14 +1,14 @@
 # Set directory for config.
-CONF_DIR=~/.zshrc.d
+CONF_DIR=~/.tconf
 
 # Apply config in specified directory if present.
 if [[ -d ${CONF_DIR} ]];then
     declare -a CONF_FILES=( \
                           "editor" \
                           "functions" \
-                          "interface" \
+                          "interface_zsh" \
                           "language" \
-                          "prompt" \
+                          "prompt_zsh" \
                           )
     # Load config.
     for conf in "${CONF_FILES[@]}";do
