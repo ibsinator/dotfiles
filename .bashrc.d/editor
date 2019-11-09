@@ -1,5 +1,0 @@
-# Path to desired editor.
-export VISUAL="/usr/bin/vim"
-
-# Set editor.
-export EDITOR="$VISUAL"
