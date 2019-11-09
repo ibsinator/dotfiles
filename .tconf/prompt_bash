@@ -1,0 +1,75 @@
+# Set colors.
+color_default=$(~/bin/color_picker DEFAULT bash fg)
+color_error=$(~/bin/color_picker BRIGHT_RED bash fg)
+
+color_light=$(~/bin/color_picker DARK_GREY bash fg)
+color_dark=$(~/bin/color_picker LIGHT_GREY bash fg)
+
+color_git_clean=$(~/bin/color_picker GREEN bash fg)
+color_git_untracked=$(~/bin/color_picker MAGENTA bash fg)
+color_git_unstaged=$(~/bin/color_picker RED bash fg)
+color_git_uncommited=$(~/bin/color_picker YELLOW bash fg)
+
+# Choose prompt main color based on OS.
+if [[ $(uname) == "Darwin" ]];then
+    color_main=$(~/bin/color_picker YELLOW bash fg)
+else
+    color_main=$(~/bin/color_picker GREEN bash fg)
+fi
+
+# Set color for directories based on color mode.
+if [[ $(cat ~/.color_picker.d/color_mode) == light ]]; then
+    color_path=${color_light}
+else
+    color_path=${color_dark}
+fi
+
+
+fancy_prompt() {
+    # Get status from last command.
+    local last_exit=${?}
+
+    # Set git branch info in color.
+    git_branch=$(git branch 2> /dev/null | awk '/^\*/ {print $2}')
+
+    if [[ -n ${git_branch} ]]; then
+    	git_status=$(git status 2> /dev/null)
+        to_push=""
+
+    	case ${git_status} in
+            *'nothing to commit'*)
+	    	color_git=${color_git_clean}
+            # Print an exclamation mark when ahead of master.
+            if grep -q "Your branch is ahead of" <<< "$git_status"; then
+                to_push=" !"
+            fi
+	    	;;
+	    *'Changes to be committed:'*)
+	        color_git=${color_git_uncommited}
+	        ;;
+	    *'Changes not staged for commit'*)
+	        color_git=${color_git_unstaged}
+	        ;;
+	    *'Untracked files'*)
+	        color_git=${color_git_untracked}
+        esac
+
+        git_branch=" (${git_branch}${to_push})"
+    fi
+
+    # Only show the exit status when it is not 0.
+    if  [[ ${last_exit} != 0 ]]; then
+        space=' '
+    else
+        space=''
+        last_exit=''
+    fi
+
+    export PS1="${color_main}\A ${color_path}\w${color_git}${git_branch}${space}${color_error}${last_exit}${color_default} \$ "
+}
+
+
+# Trim path when deeper than three directories from / or ~.
+PROMPT_DIRTRIM=3
+# Print the prompt, append to history and reloead history file.
+PROMPT_COMMAND='fancy_prompt;history -a;history -w; history -r'
