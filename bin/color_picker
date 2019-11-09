@@ -48,7 +48,7 @@ case ${COLOR_ENV} in
         prefix="colour"
         column=${NUMBER}
     ;;
-    vim)
+    vim|zsh)
         prefix=""
         column=${NUMBER}
     ;;
