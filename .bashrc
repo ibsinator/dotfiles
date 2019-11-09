@@ -1,5 +1,5 @@
 # Set directory for config.
-CONF_DIR=~/.bashrc.d
+CONF_DIR=~/.tconf
 
 # Apply config in specified directory if present.
 if [[ -d ${CONF_DIR} ]];then
@@ -9,7 +9,7 @@ if [[ -d ${CONF_DIR} ]];then
                           "history" \
                           "interface_bash" \
                           "language" \
-                          "prompt" \
+                          "prompt_bash" \
                           )
 
     # Load config.
