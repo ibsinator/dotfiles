@@ -1,0 +1,21 @@
+# Check window size after all commands.
+shopt -s checkwinsize
+
+# Make tab completion case insensitive.
+if [[ ! -f ~/.inputrc ]]; then
+    echo "set completion-ignore-case on" >  ~/.inputrc
+fi
+
+# Use colored prompt.
+force_color_prompt=yes
+
+# Allow italic fonts.
+if [[ $(uname) == "Darwin" ]];then
+    # Allow italic fonts in iTerm2.
+    # Don't forget to activate in iTerm:
+    #   Preferences -> Profiles -> Text -> Italic text allowed
+    tic /Users/$(id -un)/.bashrc.d/xterm-256color-italic.terminfo
+    export TERM=xterm-256color-italic
+else
+    export TERM=xterm-256color
+fi

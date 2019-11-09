@@ -1,0 +1,16 @@
+# Search history by start typing and press an arrow key.
+bindkey $'^[[A' up-line-or-search
+bindkey $'^[[B' down-line-or-search
+
+# Use advanced auto completion.
+autoload -Uz compinit && compinit
+
+# Activate old Bash completions.
+autoload bashcompinit && bashcompinit
+
+# Use completion for partial words.
+zstyle ':completion:*' list-suffixes
+zstyle ':completion:*' expand prefix suffix
+
+# Make tab completion case insensitive.
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'

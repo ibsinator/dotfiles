@@ -1,0 +1,13 @@
+function car {
+  FILE=$1
+  javac ${FILE}.java
+  java -cp . ${FILE}
+}
+
+
+# Make it easy to change tab name in iTerm2
+tab ()
+{
+    TITLE=$1;
+    export PROMPT_COMMAND='echo -ne "\033]0;$TITLE\007"'
+}

@@ -1,0 +1,62 @@
+# Change color mode for terminal colors.
+function cmode () {
+    selected_mode=${1}
+    mode_file=~/.color_picker.d/color_mode
+
+    if [[ ${selected_mode} == "light" ]] || \
+       [[ ${selected_mode} == "dark" ]] || \
+       [[ ${selected_mode} == "xmas" ]]
+    then
+    echo ${selected_mode} > ${mode_file}
+
+    # Reload tmux config if running.
+    if tmux list-sessions > /dev/null 2>&1; then
+        tmux source-file ~/.tmux.conf
+    fi
+
+    source ~/.tconf/prompt
+
+    else
+        echo "  Usage color_mode [light|dark|xmas]"
+        return 2
+    fi
+}
+
+
+# Make it easy to use source-highlight with less.
+# Don't forget to install source-highlight.
+#
+# Mac:
+#     brew install source-highlight
+#
+# Debian/Ubuntu:
+#     apt update
+#     apt install source-highlight
+
+function hi () {
+    case $1 in
+        help)
+        echo "Usage: hi [FILE] [OPTIONS]"
+        return
+        ;;
+    *?.?*)
+        FILE=$1
+        ;;
+    *)
+        echo "Only files with file name extension can be used."
+        return
+        ;;
+    esac
+
+    # When pretty, an indented file will be made with the suffix -indented.
+    PRETTY=$2
+    if [[ -n ${PRETTY} ]]; then
+        FILE_NAME=${FILE%.*}
+        FILE_EXTENSION=${FILE##*.}
+        FILE_COPY=${FILE_NAME}-indented.${FILE_EXTENSION}
+        cp ${FILE} ${FILE_COPY}
+        FILE=${FILE_COPY}
+    fi
+
+    source-highlight -f esc256 -i ${FILE} | less -R
+}

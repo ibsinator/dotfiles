@@ -1,0 +1,7 @@
+# Get colors
+color_default=$(~/bin/color_picker DEFAULT bash fg)
+color_fg=$(~/bin/color_picker WHITE bash fg)
+color_bg=$(~/bin/color_picker RED bash bg)
+
+# Prompt
+PS1="${color_fg}${color_bg}\A \h:\w # ${color_default} "
