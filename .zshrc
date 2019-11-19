@@ -18,6 +18,11 @@ if [[ -d ${CONF_DIR} ]];then
         fi
     done
 
+    # Load additional config, if any.
+    if [[ -f ${CONF_DIR}/add ]]; then
+        source ${CONF_DIR}/add
+    fi
+
     # Some config needs to be OS specific.
     if [[ $(uname) == "Darwin" ]];then
         SUFFIX=_mac
