@@ -41,6 +41,10 @@ fi
 if [[ $(uname) == 'Linux' ]] &&  dpkg -l | grep " gnome-terminal " > /dev/null; then
     echo "Setting custom profiles for Gnome Terminal."
     cp .config/EyeCandy.conf ~/.config/
-    dconf reset -f /org/gnome/terminal/
     dconf load /org/gnome/terminal/ < ~/.config/EyeCandy.conf
+fi
+
+if [[ ! -f ~/.color_picker.d/color_mode ]]; then
+    echo "Setting color mode light for terminal"
+    cmode light
 fi
