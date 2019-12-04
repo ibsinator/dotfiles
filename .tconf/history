@@ -5,7 +5,7 @@ shopt -s histappend
 HISTCONTROL=ignoreboth
 
 # Format of history.
-HISTTIMEFORMAT="%d%m%y %T  "
+HISTTIMEFORMAT="%y%m%d %T  "
 
 # Size of history buffer.
 HISTSIZE=10000
