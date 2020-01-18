@@ -14,7 +14,7 @@ color_git_uncommited=$(~/bin/color_picker YELLOW bash fg)
 if [[ $(uname) == "Darwin" ]];then
     color_main=$(~/bin/color_picker YELLOW bash fg)
 else
-    color_main=$(~/bin/color_picker GREEN bash fg)
+    color_main=$(~/bin/color_picker BLUE bash fg)
 fi
 
 # Set color for directories based on color mode.
