@@ -74,7 +74,7 @@ function! LightMode()
 
     " Highlight -----------------------------------------------------------------------------------
     hi Boolean        ctermfg=24   ctermbg=NONE cterm=NONE   guifg=#005f87  guibg=NONE     gui=NONE
-    hi Comment        ctermfg=243  ctermbg=NONE cterm=italic guifg=#999999  guibg=NONE     gui=italic
+    hi Comment        ctermfg=243  ctermbg=NONE cterm=NONE   guifg=#999999  guibg=NONE     gui=NONE
     hi Conditional    ctermfg=172  ctermbg=NONE cterm=NONE   guifg=#e8a23a  guibg=NONE     gui=NONE
     hi Constant       ctermfg=24   ctermbg=NONE cterm=NONE   guifg=#005f87  guibg=NONE     gui=NONE
     hi Directory      ctermfg=64   ctermbg=NONE cterm=NONE   guifg=#5f8700  guibg=NONE     gui=NONE
@@ -158,7 +158,7 @@ function! DarkMode()
 
     " Highlight ---------------------------------------------------------------
     hi Boolean        ctermfg=67   ctermbg=NONE cterm=NONE
-    hi Comment        ctermfg=245  ctermbg=NONE cterm=italic
+    hi Comment        ctermfg=245  ctermbg=NONE cterm=NONE
     hi Conditional    ctermfg=222  ctermbg=NONE cterm=NONE
     hi Constant       ctermfg=67   ctermbg=NONE cterm=NONE
     hi Error          ctermfg=15   ctermbg=88   cterm=NONE
