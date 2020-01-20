@@ -3,15 +3,16 @@
 # -----------------------------------------------------------------------------
 
 # Status bar ------------------------------------------------------------------
-set -g status-style              bg=colour252,fg=colour0
-set -g message-style             bg=colour252,fg=colour0
+set -g status-style              bg=colour243,fg=colour15
+set -g message-style             bg=colour243,fg=colour222
 set -g status-right              ' %H:%M  #(~/bin/tmux/right_status)'
 set -g status-right-length 14
 
 # Windows ---------------------------------------------------------------------
 set -g window-style              bg=colour7
-set -g window-active-style       bg=terminal
+set -g window-active-style       bg=colour15
+
 
 # Panes -----------------------------------------------------------------------
 set -g pane-border-style         bg=colour15,fg=colour15
-set -g pane-active-border-style  bg=colour252,fg=colour252
+set -g pane-active-border-style  bg=colour15,fg=colour15

@@ -21,15 +21,15 @@ STATUS_LIGHT_TEXT  254
 
 # tmux: battery status --------------------------------------------------------
 CLEAR_YELLOW       220
-DARK_GREEN         34
+DARK_GREEN         64
 DARK_RED           124
 GREY               239
 ORANGE             172
 
 # tmux: tabs for windows ------------------------------------------------------
-WIN_ACTIVE         64
-WIN_ACTIVE_TEXT    15
-WIN_INACTIVE       252
-WIN_INACTIVE_TEXT  0
-WIN_Z_ACTIVE       132
-WIN_Z_ACTIVE_TEXT  15
+WIN_ACTIVE         10
+WIN_ACTIVE_TEXT    0
+WIN_INACTIVE       243
+WIN_INACTIVE_TEXT  15
+WIN_Z_ACTIVE       11
+WIN_Z_ACTIVE_TEXT  0
