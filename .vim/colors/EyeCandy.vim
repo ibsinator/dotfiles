@@ -46,11 +46,12 @@ syntax on
 " -------------------------------------------------------------------------------------------------
 function! LightMode()
     set bg=light
+
     " Interface -----------------------------------------------------------------------------------
     hi ColorColumn    ctermfg=NONE ctermbg=7    cterm=NONE   guifg=NONE     guibg=#edeada  gui=NONE
     hi CursorLine     ctermfg=NONE ctermbg=7    cterm=NONE   guifg=NONE     guibg=#edeada  gui=NONE
     hi CursorLineNr   ctermfg=172  ctermbg=7    cterm=NONE   guifg=#e8a23a  guibg=#edeada  gui=NONE
-    hi EndOfBuffer    ctermfg=7    ctermbg=7    cterm=NONE   guifg=#e8a23a  guibg=#edeada  gui=NONE
+    hi EndOfBuffer    ctermfg=15   ctermbg=NONE cterm=NONE   guifg=#e8a23a  guibg=#edeada  gui=NONE
     hi Folded         ctermfg=15   ctermbg=247  cterm=NONE
     hi FoldColumn     ctermfg=15   ctermbg=247  cterm=NONE
     hi LineNr         ctermfg=8    ctermbg=7    cterm=NONE   guifg=#838383  guibg=#edeada  gui=NONE
