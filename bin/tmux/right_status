@@ -22,7 +22,7 @@ power_info_mac(){
         text="${white}"
     elif (( ${battery_status%?} > 59 )); then
         background="${green}"
-        text="${white}"
+        text="${black}"
     elif (( "${battery_status%?}" > 29 )); then
         background="${yellow}"
         text="${black}"

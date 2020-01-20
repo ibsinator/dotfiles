@@ -21,7 +21,7 @@ STATUS_LIGHT_TEXT  254
 
 # tmux: battery status --------------------------------------------------------
 CLEAR_YELLOW       220
-DARK_GREEN         64
+DARK_GREEN         10
 DARK_RED           124
 GREY               239
 ORANGE             172
