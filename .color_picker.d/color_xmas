@@ -13,9 +13,6 @@ PROMPT_LINUX       2
 PROMPT_MAC         3
 
 # tmux: status bar ------------------------------------------------------------
-BAR_BG             234
-STATUSBAR_TEXT     233
-MESSAGEBAR_TEXT    220
 STATUS_DARK_TEXT   233
 STATUS_LIGHT_TEXT  255
 
