@@ -51,7 +51,7 @@ function! LightMode()
     hi ColorColumn    ctermfg=NONE ctermbg=7    cterm=NONE   guifg=NONE     guibg=#edeada  gui=NONE
     hi CursorLine     ctermfg=NONE ctermbg=7    cterm=NONE   guifg=NONE     guibg=#edeada  gui=NONE
     hi CursorLineNr   ctermfg=172  ctermbg=7    cterm=NONE   guifg=#e8a23a  guibg=#edeada  gui=NONE
-    hi EndOfBuffer    ctermfg=15   ctermbg=NONE cterm=NONE   guifg=#faf5e4  guibg=NONE     gui=NONE
+    hi EndOfBuffer    ctermfg=15   ctermbg=NONE cterm=NONE   guifg=#e8a23a  guibg=NONE     gui=NONE
     hi Folded         ctermfg=15   ctermbg=247  cterm=NONE
     hi FoldColumn     ctermfg=15   ctermbg=247  cterm=NONE
     hi LineNr         ctermfg=8    ctermbg=7    cterm=NONE   guifg=#838383  guibg=#edeada  gui=NONE
@@ -116,7 +116,7 @@ function! LightMode()
     hi DiffText       ctermfg=0    ctermbg=228  cterm=NONE
 
     " Colors for modes ---------------------------------------------------------------------------
-    hi User1          ctermfg=8    ctermbg=7    cterm=NONE   guifg=#838383  guibg=#faf5e4  gui=NONE
+    hi User1          ctermfg=243  ctermbg=7    cterm=NONE   guifg=#838383  guibg=#faf5e4  gui=NONE
     hi User2          ctermfg=8    ctermbg=7    cterm=NONE   guifg=#838383  guibg=#faf5e4  gui=NONE
     au InsertEnter * call ModeColor(v:insertmode)
     au InsertLeave * hi StatusLine ctermfg=15   ctermbg=243 cterm=NONE   guifg=#edeada  guibg=#727272  gui=NONE
