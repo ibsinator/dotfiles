@@ -24,7 +24,7 @@ GREY               239
 ORANGE             172
 
 # tmux: tabs for windows ------------------------------------------------------
-WIN_ACTIVE         10
+WIN_ACTIVE         149
 WIN_ACTIVE_TEXT    0
 WIN_INACTIVE       243
 WIN_INACTIVE_TEXT  15
