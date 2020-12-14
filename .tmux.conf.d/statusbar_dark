@@ -9,9 +9,9 @@ set -g status-right              ' %H:%M  #(~/bin/tmux/right_status)'
 set -g status-right-length 14
 
 # Windows ---------------------------------------------------------------------
-set -g window-style              bg=colour8
+set -g window-style              bg=colour235
 set -g window-active-style       bg=terminal
 
 # Panes -----------------------------------------------------------------------
-set -g pane-border-style         bg=colour8,fg=colour8
-set -g pane-active-border-style  bg=colour238,fg=colour238
+set -g pane-border-style         bg=colour0,fg=colour0
+set -g pane-active-border-style  bg=colour0,fg=colour0
