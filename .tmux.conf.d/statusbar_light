@@ -10,7 +10,7 @@ set -g status-right-length 14
 
 # Windows ---------------------------------------------------------------------
 set -g window-style              bg=colour7
-set -g window-active-style       bg=colour15
+set -g window-active-style       bg=terminal
 
 
 # Panes -----------------------------------------------------------------------

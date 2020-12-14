@@ -14,4 +14,4 @@ set -g window-active-style        bg=terminal
 
 # Panes -----------------------------------------------------------------------
 set -g pane-border-style          bg=colour15,fg=colour15
-set -g pane-active-border-style   bg=colour252,fg=colour252
+set -g pane-active-border-style   bg=colour15,fg=colour15
