@@ -48,76 +48,76 @@ function! LightMode()
     set bg=light
 
     " Interface -----------------------------------------------------------------------------------
-    hi ColorColumn    ctermfg=NONE ctermbg=7    cterm=NONE   guifg=NONE    guibg=#edeada gui=NONE
-    hi CursorLine     ctermfg=NONE ctermbg=7    cterm=NONE   guifg=NONE    guibg=#edeada gui=NONE
-    hi CursorLineNr   ctermfg=172  ctermbg=7    cterm=NONE   guifg=#e8a23a guibg=#edeada gui=NONE
-    hi EndOfBuffer    ctermfg=15   ctermbg=NONE cterm=NONE   guifg=#faf5e4 guibg=NONE    gui=NONE
-    hi Folded         ctermfg=15   ctermbg=247  cterm=NONE   guifg=#faf5e4 guibg=#9e9e9e gui=NONE
-    hi FoldColumn     ctermfg=15   ctermbg=247  cterm=NONE   guifg=#faf5e4 guibg=#9e9e9e gui=NONE
-    hi LineNr         ctermfg=8    ctermbg=7    cterm=NONE   guifg=#838383 guibg=#edeada gui=NONE
-    hi Normal         ctermfg=NONE ctermbg=NONE cterm=NONE   guifg=#392d1e guibg=#faf5e4 gui=NONE
-    hi Pmenu          ctermfg=8    ctermbg=7    cterm=NONE   guifg=#838383 guibg=#edeada gui=NONE
-    hi PmenuSel       ctermfg=15   ctermbg=208  cterm=NONE   guifg=#faf5e4 guibg=#ff8700 gui=NONE
-    hi StatusLine     ctermfg=15   ctermbg=243  cterm=NONE   guifg=#edeada guibg=#727272 gui=NONE
-    hi VertSplit      ctermfg=247  ctermbg=247  cterm=NONE   guifg=#9e9e9e guibg=#9e9e9e gui=NONE
-    hi Visual         ctermfg=0    ctermbg=228  cterm=NONE   guifg=#392d1e guibg=#ffce5e gui=NONE
+    hi ColorColumn    ctermfg=NONE ctermbg=7    cterm=NONE   guifg=NONE     guibg=#edeada  gui=NONE
+    hi CursorLine     ctermfg=NONE ctermbg=7    cterm=NONE   guifg=NONE     guibg=#edeada  gui=NONE
+    hi CursorLineNr   ctermfg=172  ctermbg=7    cterm=NONE   guifg=#e8a23a  guibg=#edeada  gui=NONE
+    hi EndOfBuffer    ctermfg=15   ctermbg=NONE cterm=NONE   guifg=#e8a23a  guibg=NONE     gui=NONE
+    hi Folded         ctermfg=15   ctermbg=247  cterm=NONE
+    hi FoldColumn     ctermfg=15   ctermbg=247  cterm=NONE
+    hi LineNr         ctermfg=8    ctermbg=7    cterm=NONE   guifg=#838383  guibg=#edeada  gui=NONE
+    hi Normal         ctermfg=NONE ctermbg=NONE cterm=NONE   guifg=#392d1e  guibg=#faf5e4  gui=NONE
+    hi Pmenu          ctermfg=8    ctermbg=7    cterm=NONE   guifg=#838383  guibg=#edeada  gui=NONE
+    hi PmenuSel       ctermfg=15   ctermbg=208  cterm=NONE   guifg=#faf5e4  guibg=#ff8700  gui=NONE
+    hi StatusLine     ctermfg=15   ctermbg=243  cterm=NONE   guifg=#edeada  guibg=#727272  gui=NONE
+    hi VertSplit      ctermfg=247  ctermbg=247  cterm=NONE
+    hi Visual         ctermfg=0    ctermbg=228  cterm=NONE   guifg=#392d1e  guibg=#ffce5e  gui=NONE
 
     " Messages ------------------------------------------------------------------------------------
-    hi ErrorMsg       ctermfg=15   ctermbg=88   cterm=NONE   guifg=#faf5e4 guibg=#af0000 gui=NONE
-    hi MoreMsg        ctermfg=166  ctermbg=NONE cterm=NONE   guifg=#df8700 guibg=NONE    gui=NONE
-    hi Question       ctermfg=166  ctermbg=NONE cterm=NONE   guifg=#df8700 guibg=NONE    gui=NONE
-    hi WarningMsg     ctermfg=88   ctermbg=NONE cterm=NONE   guifg=#af0000 guibg=NONE    gui=NONE
+    hi ErrorMsg       ctermfg=15   ctermbg=88   cterm=NONE   guifg=#faf5e4  guibg=#af0000  gui=NONE
+    hi MoreMsg        ctermfg=166  ctermbg=NONE cterm=NONE   guifg=#df8700  guibg=NONE     gui=NONE
+    hi Question       ctermfg=166  ctermbg=NONE cterm=NONE   guifg=#df8700  guibg=NONE     gui=NONE
+    hi WarningMsg     ctermfg=88   ctermbg=NONE cterm=NONE   guifg=#af0000  guibg=NONE     gui=NONE
 
     " Search --------------------------------------------------------------------------------------
-    hi IncSearch      ctermfg=221  ctermbg=0    cterm=NONE   guifg=#ffdf5f guibg=#392d1e gui=NONE
-    hi Search         ctermfg=0    ctermbg=221  cterm=NONE   guifg=#392d1e guibg=#ffdf5f gui=NONE
+    hi IncSearch      ctermfg=221  ctermbg=0    cterm=NONE   guifg=#ffdf5f  guibg=#392d1e  gui=NONE
+    hi Search         ctermfg=0    ctermbg=221  cterm=NONE   guifg=#392d1e  guibg=#ffdf5f  gui=NONE
 
     " Highlight -----------------------------------------------------------------------------------
-    hi Boolean        ctermfg=24   ctermbg=NONE cterm=NONE   guifg=#005f87 guibg=NONE    gui=NONE
-    hi Comment        ctermfg=243  ctermbg=NONE cterm=NONE   guifg=#999999 guibg=NONE    gui=NONE
-    hi Conditional    ctermfg=172  ctermbg=NONE cterm=NONE   guifg=#e8a23a guibg=NONE    gui=NONE
-    hi Constant       ctermfg=24   ctermbg=NONE cterm=NONE   guifg=#005f87 guibg=NONE    gui=NONE
-    hi Directory      ctermfg=64   ctermbg=NONE cterm=NONE   guifg=#5f8700 guibg=NONE    gui=NONE
-    hi Error          ctermfg=160  ctermbg=208  cterm=NONE   guifg=#d70000 guibg=#ff8700 gui=NONE
-    hi Float          ctermfg=210  ctermbg=NONE cterm=NONE   guifg=#ff8787 guibg=NONE    gui=NONE
-    hi Function       ctermfg=64   ctermbg=NONE cterm=NONE   guifg=#5f8700 guibg=NONE    gui=NONE
-    hi Identifier     ctermfg=24   ctermbg=NONE cterm=NONE   guifg=#005f87 guibg=NONE    gui=NONE
-    hi MatchParen     ctermfg=NONE ctermbg=208  cterm=NONE   guifg=NONE    guibg=#ff8700 gui=NONE
-    hi NonText        ctermfg=247  ctermbg=NONE cterm=NONE   guifg=#9e9e9e guibg=NONE    gui=NONE
-    hi Number         ctermfg=210  ctermbg=NONE cterm=NONE   guifg=#ff8787 guibg=NONE    gui=NONE
-    hi Preproc        ctermfg=24   ctermbg=NONE cterm=NONE   guifg=#005f87 guibg=NONE    gui=NONE
-    hi Special        ctermfg=24   ctermbg=NONE cterm=NONE   guifg=#005f87 guibg=NONE    gui=NONE
-    hi SpecialKey     ctermfg=247  ctermbg=NONE cterm=NONE   guifg=#9e9e9e guibg=NONE    gui=NONE
-    hi Statement      ctermfg=172  ctermbg=NONE cterm=NONE   guifg=#e8a23a guibg=NONE    gui=NONE
-    hi String         ctermfg=124  ctermbg=NONE cterm=NONE   guifg=#e8a23a guibg=NONE    gui=NONE
-    hi Type           ctermfg=64   ctermbg=NONE cterm=NONE   guifg=#5f8700 guibg=NONE    gui=NONE
+    hi Boolean        ctermfg=24   ctermbg=NONE cterm=NONE   guifg=#005f87  guibg=NONE     gui=NONE
+    hi Comment        ctermfg=243  ctermbg=NONE cterm=NONE   guifg=#999999  guibg=NONE     gui=NONE
+    hi Conditional    ctermfg=172  ctermbg=NONE cterm=NONE   guifg=#e8a23a  guibg=NONE     gui=NONE
+    hi Constant       ctermfg=24   ctermbg=NONE cterm=NONE   guifg=#005f87  guibg=NONE     gui=NONE
+    hi Directory      ctermfg=64   ctermbg=NONE cterm=NONE   guifg=#5f8700  guibg=NONE     gui=NONE
+    hi Error          ctermfg=160  ctermbg=208  cterm=NONE
+    hi Float          ctermfg=210  ctermbg=NONE cterm=NONE
+    hi Function       ctermfg=64   ctermbg=NONE cterm=NONE   guifg=#5f8700  guibg=NONE     gui=NONE
+    hi Identifier     ctermfg=24   ctermbg=NONE cterm=NONE   guifg=#005f87  guibg=NONE     gui=NONE
+    hi MatchParen     ctermfg=NONE ctermbg=208  cterm=NONE   guifg=#e8a23a  guibg=NONE     gui=NONE
+    hi NonText        ctermfg=247  ctermbg=NONE cterm=NONE
+    hi Number         ctermfg=210  ctermbg=NONE cterm=NONE
+    hi Preproc        ctermfg=24   ctermbg=NONE cterm=NONE   guifg=#005f87  guibg=NONE     gui=NONE
+    hi Special        ctermfg=24   ctermbg=NONE cterm=NONE   guifg=#005f87  guibg=NONE     gui=NONE
+    hi SpecialKey     ctermfg=247  ctermbg=NONE cterm=NONE
+    hi Statement      ctermfg=172  ctermbg=NONE cterm=NONE   guifg=#e8a23a  guibg=NONE     gui=NONE
+    hi String         ctermfg=124  ctermbg=NONE cterm=NONE
+    hi Type           ctermfg=64   ctermbg=NONE cterm=NONE   guifg=#5f8700  guibg=NONE     gui=NONE
 
     " Highlight whitespace(s) at the end of the line.
-    hi WhitespaceEOL  ctermfg=NONE ctermbg=24   cterm=NONE   guifg=NONE    guibg=#005f87 gui=NONE
+    hi WhitespaceEOL  ctermfg=NONE ctermbg=24  cterm=NONE    guifg=NONE     guibg=#005f87  gui=NONE
     match WhitespaceEOL /\s\+$/
 
     " Language specific highlight -----------------------------------------------------------------
     " Bash
-    hi shConditional  ctermfg=179  ctermbg=NONE cterm=NONE   guifg=#d7af5f  guibg=NONE    gui=NONE
-    hi shStatement    ctermfg=130  ctermbg=NONE cterm=NONE   guifg=#af5f00  guibg=NONE    gui=NONE
+    hi shConditional  ctermfg=179  ctermbg=NONE cterm=NONE
+    hi shStatement    ctermfg=130  ctermbg=NONE cterm=NONE
 
     " Vim
     hi link vimFuncKey Function
 
     " Python
-    hi pythonInclude  ctermfg=24   ctermbg=NONE cterm=NONE   guifg=NONE     guibg=#005f87 gui=NONE
-    hi pythonoperator ctermfg=172  ctermbg=NONE cterm=NONE   guifg=#e8a23a  guibg=NONE    gui=NONE
-    hi pythonRepeat   ctermfg=172  ctermbg=NONE cterm=NONE   guifg=#e8a23a  guibg=NONE    gui=NONE
+    hi pythonInclude  ctermfg=24   ctermbg=NONE cterm=NONE   guifg=NONE     guibg=#005f87  gui=NONE
+    hi pythonoperator ctermfg=172  ctermbg=NONE cterm=NONE   guifg=#e8a23a  guibg=NONE     gui=NONE
+    hi pythonRepeat   ctermfg=172  ctermbg=NONE cterm=NONE   guifg=#e8a23a  guibg=NONE     gui=NONE
 
     " VimdDff -------------------------------------------------------------------------------------
-    hi DiffAdd        ctermfg=0    ctermbg=228  cterm=NONE   guifg=#000000 guibg=#ffff87 gui=NONE
-    hi DiffChange     ctermfg=0    ctermbg=216  cterm=NONE   guifg=#000000 guibg=#ffaf87 gui=NONE
-    hi DiffDelete     ctermfg=15   ctermbg=67   cterm=NONE   guifg=#e8a23a guibg=#ffffff gui=NONE
-    hi DiffText       ctermfg=0    ctermbg=228  cterm=NONE   guifg=#000000 guibg=#ffff87 gui=NONE
+    hi DiffAdd        ctermfg=0    ctermbg=228  cterm=NONE
+    hi DiffChange     ctermfg=0    ctermbg=216  cterm=NONE
+    hi DiffDelete     ctermfg=15   ctermbg=67   cterm=NONE
+    hi DiffText       ctermfg=0    ctermbg=228  cterm=NONE
 
     " Colors for modes ---------------------------------------------------------------------------
-    hi User1          ctermfg=243  ctermbg=7    cterm=NONE  guifg=#838383 guibg=#faf5e4 gui=NONE
-    hi User2          ctermfg=8    ctermbg=7    cterm=NONE  guifg=#838383 guibg=#faf5e4 gui=NONE
+    hi User1          ctermfg=243  ctermbg=7    cterm=NONE   guifg=#838383  guibg=#faf5e4  gui=NONE
+    hi User2          ctermfg=8    ctermbg=7    cterm=NONE   guifg=#838383  guibg=#faf5e4  gui=NONE
     au InsertEnter * call ModeColor(v:insertmode)
     au InsertLeave * hi StatusLine ctermfg=15   ctermbg=243 cterm=NONE   guifg=#edeada  guibg=#727272  gui=NONE
 endfunction
@@ -134,11 +134,11 @@ function! DarkMode()
     hi ColorColumn    ctermfg=NONE ctermbg=8    cterm=NONE
     hi Cursor         ctermfg=8    ctermbg=7    cterm=NONE
     hi CursorLine     ctermfg=NONE ctermbg=8    cterm=NONE
-    hi CursorLineNr   ctermfg=228  ctermbg=8    cterm=NONE
-    hi EndOfBuffer    ctermfg=8    ctermbg=8    cterm=NONE
+    hi CursorLineNr   ctermfg=11   ctermbg=8    cterm=NONE
+    hi EndOfBuffer    ctermfg=0    ctermbg=0    cterm=NONE
     hi Folded         ctermfg=15   ctermbg=242  cterm=NONE
     hi FoldColumn     ctermfg=15   ctermbg=242  cterm=NONE
-    hi LineNr         ctermfg=245  ctermbg=8    cterm=NONE
+    hi LineNr         ctermfg=7    ctermbg=8    cterm=NONE
     hi Pmenu          ctermfg=15   ctermbg=8    cterm=NONE
     hi PmenuSel       ctermfg=15   ctermbg=208  cterm=NONE
     hi StatusLine     ctermfg=15   ctermbg=242  cterm=NONE
@@ -223,6 +223,8 @@ endfunction
 
 " Apply colors ----------------------------------------------------------------
 if g:colormode == 'dark'
+    call DarkMode()
+elseif g:colormode == 'purple'
     call DarkMode()
 else
     call LightMode()

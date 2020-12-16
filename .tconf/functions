@@ -5,6 +5,7 @@ function cmode () {
 
     if [[ ${selected_mode} == "light" ]] || \
        [[ ${selected_mode} == "dark" ]] || \
+       [[ ${selected_mode} == "purple" ]] || \
        [[ ${selected_mode} == "xmas" ]]
     then
     echo ${selected_mode} > ${mode_file}
@@ -21,7 +22,7 @@ function cmode () {
     fi
 
     else
-        echo "  Usage color_mode [light|dark|xmas]"
+        echo "  Usage color_mode [light|dark|purple|xmas]"
         return 2
     fi
 }

@@ -1,0 +1,17 @@
+# -----------------------------------------------------------------------------
+# INTERFACE SETTINGS FOR DARK TMUX --------------------------------------------
+# -----------------------------------------------------------------------------
+
+# Status bar ------------------------------------------------------------------
+set -g status-style              bg=colour238,fg=colour254
+set -g message-style             bg=colour238,fg=colour214
+set -g status-right              ' %H:%M  #(~/bin/tmux/right_status)'
+set -g status-right-length 14
+
+# Windows ---------------------------------------------------------------------
+set -g window-style              bg=colour8
+set -g window-active-style       bg=colour0
+
+# Panes -----------------------------------------------------------------------
+set -g pane-border-style         bg=colour0,fg=colour0
+set -g pane-active-border-style  bg=colour0,fg=colour0

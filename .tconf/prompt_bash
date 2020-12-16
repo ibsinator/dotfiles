@@ -20,6 +20,8 @@ fi
 # Set color for directories based on color mode.
 if [[ $(cat ~/.color_picker.d/color_mode) == dark ]]; then
     color_path=${color_dark}
+elif [[ $(cat ~/.color_picker.d/color_mode) == purple ]]; then
+    color_path=${color_dark}
 else
     color_path=${color_light}
 fi
