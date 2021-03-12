@@ -8,6 +8,7 @@ TYPE=${1}
 # Exclude git and installation files.
 EXCLUDE="--exclude .git \
          --exclude .gitignore \
+         --exclude .gitconfig \
          --exclude *.md \
          --exclude ${SCRIPT_NAME}"
 
