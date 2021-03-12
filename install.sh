@@ -45,6 +45,11 @@ if [[ $(uname) == 'Linux' ]] &&  dpkg -l | grep " gnome-terminal " > /dev/null; 
     dconf load /org/gnome/terminal/legacy/profiles:/ < ~/.config/EyeCandy.conf
 fi
 
+# Apply color settings for terminal.
+if ! type cmode > /dev/null 2>&1; then
+    exec $SHELL
+fi
+
 if [[ ! -f ~/.color_picker.d/color_mode ]]; then
     echo "Setting color mode light for terminal"
     cmode light
