@@ -6,6 +6,9 @@ alias egrep='egrep --color=auto'
 # Colorize output of ls.
 alias ls='ls -lG'
 
+# bat is better than cat
+alias bat='bat --style=plain --theme=ansi --paging=never'
+
 # ll lists all files but . and ..
 alias ll='ls -Al'
 
