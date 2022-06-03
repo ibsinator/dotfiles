@@ -12,8 +12,16 @@ for window_name in ${window_list}; do
         # Active windows.
         color="#[bg=$(~/bin/color_picker WIN_ACTIVE tmux) \
                fg=$(~/bin/color_picker WIN_ACTIVE_TEXT tmux)]"
+    elif [[ ${window_name} =~ [*][M]$ ]]; then
+        # Marked window.
+        color="#[bg=$(~/bin/color_picker WIN_M_ACTIVE tmux) \
+               fg=$(~/bin/color_picker WIN_M_ACTIVE_TEXT tmux)]"
     elif [[ ${window_name} =~ [*][Z]$ ]]; then
         # Active window in zoomed mode.
+        color="#[bg=$(~/bin/color_picker WIN_Z_ACTIVE tmux) \
+               fg=$(~/bin/color_picker WIN_Z_ACTIVE_TEXT tmux)]"
+    elif [[ ${window_name} =~ [*]MZ$ ]]; then
+        # Marked window.
         color="#[bg=$(~/bin/color_picker WIN_Z_ACTIVE tmux) \
                fg=$(~/bin/color_picker WIN_Z_ACTIVE_TEXT tmux)]"
     else
@@ -23,7 +31,7 @@ for window_name in ${window_list}; do
     fi
 
     # Remove indicators in window names, i.e. [*-Z].
-    window_name=$(echo ${window_name} | sed 's/[Z]$//' | sed 's/[*-]$//' | awk '{print toupper($0)}')
+    window_name=$(echo ${window_name} | sed 's/[Z]$//' | sed 's/[M]$//' | sed 's/[*-]$//' | awk '{print toupper($0)}')
 
     window_tabs="${window_tabs}${color} ${window_name} "${default_color}" "
 done
