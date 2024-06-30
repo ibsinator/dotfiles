@@ -17,3 +17,4 @@ alias numbatt='bat --style=numbers --theme=ansi --paging=always'
 
 # Help for lazy fingers.
 alias cd..='cd ..'
+alias ud=brew update & brew upgrade"
